@@ -4,7 +4,7 @@ var express = require("express");
 var app = express();
 var mongoose = require("mongoose");
 var userController = require("./routes/user.router")
-
+var connectDB = require("./db");
 connectDB();
 
  
