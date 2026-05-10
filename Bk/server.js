@@ -3,10 +3,14 @@ require("dotenv").config();
 var express = require("express");
 var app = express();
 var mongoose = require("mongoose");
-
+var userController = require("./routes/user.router")
 
 connectDB();
 
+ 
+
+
+app.use("/users", userController);
 
 app.get("/", (req, res) => {
   res.send("Hello");
